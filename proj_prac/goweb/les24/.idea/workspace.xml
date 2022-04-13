@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76ea8849-2b0d-4cdb-87c3-595d68f27864" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../gorm-19/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../les10/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../les18/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../les25/controller/controller.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../les25/dao/mysql.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../les25/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../les25/models/todo.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../les25/routers/routers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
