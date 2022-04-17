@@ -7,9 +7,10 @@ import (
 	"log"
 	"time"
 
+	"features/authentication"
 	"features/data"
 	ecpb "features/proto/echo"
-
+	"golang.org/x/oauth2"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
 )
@@ -29,18 +30,28 @@ func callUnaryEcho(client ecpb.EchoClient, message string) {
 func main() {
 	flag.Parse()
 
-	// 客户端通过ca证书来验证服务的提供的证书
+	// 构建一个 PerRPCCredentials。
+	// perRPC := oauth.NewOauthAccess(fetchToken())
+	myAuth := authentication.NewMyAuth()
 	creds, err := credentials.NewClientTLSFromFile(data.Path("x509/ca.crt"), "www.xiaomingdou.com")
 	if err != nil {
 		log.Fatalf("failed to load credentials: %v", err)
 	}
-	// 建立连接时指定使用 TLS
-	conn, err := grpc.Dial(*addr, grpc.WithTransportCredentials(creds))
+
+	// conn, err := grpc.Dial(*addr, grpc.WithTransportCredentials(creds), grpc.WithPerRPCCredentials(perRPC))
+	conn, err := grpc.Dial(*addr, grpc.WithTransportCredentials(creds), grpc.WithPerRPCCredentials(myAuth))
 	if err != nil {
 		log.Fatalf("did not connect: %v", err)
 	}
 	defer conn.Close()
-
 	client := ecpb.NewEchoClient(conn)
+
 	callUnaryEcho(client, "hello world")
+}
+
+// fetchToken 获取授权信息
+func fetchToken() *oauth2.Token {
+	return &oauth2.Token{
+		AccessToken: "some-secret-token",
+	}
 }
