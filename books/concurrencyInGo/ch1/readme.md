@@ -3,5 +3,5 @@
   - Amdahl’s law  -> potential performance gains is limited
   - embarrassingly parallel
     - Race Conditions
-    -  
+    - Atomicity 
 - Why is Concurrency Hard
