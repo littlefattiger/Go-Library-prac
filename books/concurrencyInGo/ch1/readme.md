@@ -1,5 +1,7 @@
 - History
   - Moore’s Law -> number of components on an integrated circuit would double every two years
   - Amdahl’s law  -> potential performance gains is limited
-  - embarrassingly parallel  
+  - embarrassingly parallel
+    - Race Conditions
+    -  
 - Why is Concurrency Hard
