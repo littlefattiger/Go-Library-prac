@@ -2,6 +2,8 @@
   - Moore’s Law -> number of components on an integrated circuit would double every two years
   - Amdahl’s law  -> potential performance gains is limited
   - embarrassingly parallel
-    - Race Conditions
-    - Atomicity 
+
 - Why is Concurrency Hard
+  - Race Conditions
+  - Atomicity 
+  - Memory Access Synchronization
