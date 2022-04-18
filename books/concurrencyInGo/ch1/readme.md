@@ -7,3 +7,4 @@
   - Race Conditions
   - Atomicity 
   - Memory Access Synchronization
+  - Deadlocks, Livelocks, and Starvation
