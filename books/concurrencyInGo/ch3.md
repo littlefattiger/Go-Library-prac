@@ -41,3 +41,5 @@ wg.Add(2)
 go sender() go receiver() b.StartTimer() close(begin) wg.Wait()
 }
 ```
+#### The sync Package
+concurrency primitives
