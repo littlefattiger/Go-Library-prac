@@ -1,1 +1,1 @@
-placehold
+- Thus, goroutines can be considered a special class of coroutine.
