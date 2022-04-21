@@ -46,3 +46,4 @@ concurrency primitives
 - WaitGroup is a great way to wait for a set of concurrent operations to complete when you either don’t care about the result of the concurrent operation, or you have other means of collecting their results.
 - Mutex and RWMutex
 - Cond
+- Once
