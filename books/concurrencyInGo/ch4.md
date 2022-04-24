@@ -50,5 +50,16 @@ time.Sleep(1 * time.Second)
 -   pipeline stage -> higher order functions and monads
     - If a stage is blocked on retrieving a value from the incoming channel, it will become unblocked when that channel is closed. 
     - Fan-out is a term to describe the process of starting multiple goroutines to handle input from the pipeline, and fan-in is a term to describe the process of combining multiple results into one channel
+-   The or-done-channel
+-   The tee-channel -You can pass it a channel to read from, and it will return two separate channels that will get the same value
+-   The bridge-channel - consume values from a sequence of channels
+-   Queuing
+Summary
+Several 
+We’ve covered a lot of ground in this chapter. We’ve combined Go’s concurrency
+primitives to form patterns that help write maintainable concurrent code. Now that
+you’re familiar with these patterns, we can discuss how we can incorporate these pat‐
+terns into other patterns that will help you to write large systems. The next chapter
+will give you an overview of techniques for doing just that.
 
 
